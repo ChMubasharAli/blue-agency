@@ -4,24 +4,10 @@ import { useState, useRef, useId, useEffect } from "react";
 
 const Slide = ({ slide, index, current, handleSlideClick }) => {
   const slideRef = useRef(null);
-  const [showVideo, setShowVideo] = useState(false);
 
   const xRef = useRef(0);
   const yRef = useRef(0);
   const frameRef = useRef();
-
-  // Jab slide active ho tab video load karein
-  useEffect(() => {
-    if (current === index) {
-      // Thoda delay dekar smooth experience dena
-      const timer = setTimeout(() => {
-        setShowVideo(true);
-      }, 300);
-      return () => clearTimeout(timer);
-    } else {
-      setShowVideo(false);
-    }
-  }, [current, index]);
 
   useEffect(() => {
     const animate = () => {
@@ -65,7 +51,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center  relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 cursor-pointer"
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 cursor-pointer"
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -87,46 +73,19 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
                 : "none",
           }}
         >
-          {/* Active slide mein video ya thumbnail */}
-          {current === index && showVideo ? (
-            // Video show karein (autoplay nahi)
-            <iframe
-              className="absolute inset-0 w-full h-full object-cover"
-              src={`${src}?autoplay=0&controls=1&modestbranding=1&rel=0`}
-              title={title}
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          ) : (
-            // Thumbnail show karein
-            <div className="absolute inset-0 w-full h-full">
-              <img
-                className="w-full h-full object-cover"
-                src={thumbnail}
-                alt={title}
-                loading="lazy"
-              />
-              {/* Play button overlay */}
-              {current === index && (
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
+          {/* Sabhi slides mein directly YouTube videos load karein (autoplay=0) */}
+          <iframe
+            className="absolute inset-0 w-full h-full object-cover"
+            src={`${src}?autoplay=0&controls=1&modestbranding=1&rel=0`}
+            title={title}
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+          ></iframe>
 
-          {/* Overlay for inactive slides */}
+          {/* Inactive slides par overlay */}
           {current !== index && (
-            <div className="absolute inset-0 bg-black/40 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-black/60 transition-all duration-1000" />
           )}
         </div>
       </li>

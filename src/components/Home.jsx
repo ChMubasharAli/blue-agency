@@ -1,6 +1,12 @@
 "use client";
 
-import { ChevronRight, Play, ArrowRight } from "lucide-react";
+import {
+  ChevronRight,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  ExternalLink,
+} from "lucide-react";
 import NavigationBar from "./Navbar";
 import Testimonials from "./Testimonials";
 import MovingCards from "./MovingCards";
@@ -112,52 +118,6 @@ export default function BlueAgencyLanding() {
         </div>
       </section>
 
-      {/* Features Section */}
-      {/* <section className="py-20 px-6 bg-slate-900/50">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Effective,{" "}
-              <span className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Powerful Video Ads
-              </span>{" "}
-              Without
-              <span className="block mt-2">Any Effort on Your Part</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-6">
-              Our video ads are created to grab attention, build interest, and
-              convert viewers into buyers — all without you lifting a finger. We
-              take care of everything from research to final edit.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8  mx-auto">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-blue-900/20 to-slate-900/20 p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/50 transition group"
-              >
-                <div className="w-14 h-14 bg-linear-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                  <CheckCircle size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{feature}</h3>
-                <p className="text-gray-400">
-                  {index === 0 &&
-                    "Every video is built on a custom script designed to resonate with your audience and drive conversions."}
-                  {index === 1 &&
-                    "We use state-of-the-art filming, pro-level editing, and premium graphics to make your brand shine."}
-                  {index === 2 &&
-                    "Sit back and relax. We handle all the heavy lifting — from concept to delivery — while you celebrate the wins."}
-                  {index === 3 &&
-                    "Our videos aren't just creative — they're engineered to convert viewers into real, qualified leads."}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Services Sections  */}
       {/* Services Section */}
       <section id="services" className="py-20 px-6 bg-slate-900/50">
         <div className="container mx-auto">
@@ -179,6 +139,109 @@ export default function BlueAgencyLanding() {
         </div>
       </section>
 
+      {/* Logo & Webdesign Section */}
+      <section className="py-20 px-6 bg-slate-900/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Logo & Web Design
+              <span className="block py-3 bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Effortless for you. Powerful for your brand.
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-6">
+              Let us do the heavy lifting — while you focus on what you do best.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* Main Content */}
+            <div className="space-y-6">
+              <h3 className="text-xl md:text-3xl font-bold">
+                Transform Your Online Presence with a Website That Works as Hard
+                as You Do
+              </h3>
+              <p className="text-lg text-gray-300">
+                Stand out, get found, and convert like never before — all in
+                under 30 days.
+              </p>
+              <p className="text-gray-400">
+                We create fully custom, modern websites built to turn visitors
+                into customers, with clean design, strategic flow, and full SEO
+                optimization baked in from day one.
+              </p>
+
+              {/* Features List */}
+              <div className="space-y-4 mt-8">
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-linear-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <CheckCircle size={16} className="text-white" />
+                  </div>
+                  <span className="text-gray-300">Tailored-to-you design</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-linear-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <CheckCircle size={16} className="text-white" />
+                  </div>
+                  <span className="text-gray-300">
+                    Conversion-driven structure
+                  </span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-linear-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                    <CheckCircle size={16} className="text-white" />
+                  </div>
+                  <span className="text-gray-300">
+                    Unlimited revisions until it&apos;s perfect
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Sample Websites */}
+            <div className="bg-linear-to-br from-blue-900/20 to-slate-900/20 p-8 rounded-2xl border border-blue-500/20">
+              <h4 className="text-xl font-bold mb-6 text-center">
+                Our Work Samples
+              </h4>
+              <div className="space-y-4">
+                <a
+                  href="https://yourneighborrick.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition border border-blue-500/20 hover:border-blue-500/50"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-400">yourneighborrick.com</span>
+                    <ExternalLink size={18} className="text-gray-400" />
+                  </div>
+                </a>
+                <a
+                  href="https://theraynegronstory.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition border border-blue-500/20 hover:border-blue-500/50"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-400">theraynegronstory.com</span>
+                    <ExternalLink size={18} className="text-gray-400" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Statement */}
+          <div className="text-center mt-12 p-4 md:p-8 bg-linear-to-r from-blue-900/20 to-cyan-900/20 rounded-2xl border border-blue-500/30">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              This isn&apos;t just web design.
+            </h3>
+            <p className="text-xl text-cyan-400 font-semibold">
+              It&apos;s your digital storefront — reimagined for performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 px-6">
         <div className="container mx-auto">
@@ -191,19 +254,27 @@ export default function BlueAgencyLanding() {
                 </span>
                 Forward
               </h2>
-              <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                We&apos;re an independent, full-service marketing agency built
-                for today&apos;s digital world. With a passion for creativity
-                and data-driven strategies, we specialize in digital
+              <p className="text-gray-300 text-lg text-justify mb-6 leading-relaxed">
+                At Blue Agency, we don&apos;t just market — we move brands
+                forward. We&apos;re an independent, full-service marketing
+                agency built for today&apos;s digital world. With a passion for
+                creativity and data-driven strategies, we specialize in digital
                 advertising, marketing videos, web design, branding, and
-                high-impact campaigns.
+                high-impact campaigns across platforms like Instagram, TikTok,
+                and Facebook.
               </p>
-              <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+              <p className="text-gray-300 text-lg text-justify mb-6 leading-relaxed">
                 From startups to established brands, we work with businesses
                 ready to grow — providing everything from social media
                 advertising to branding strategies and customized marketing
-                packages with transparent pricing plans.
+                packages with transparent pricing plans. What sets us apart? A
+                human approach, honest communication, and measurable results. We
+                stay ahead of trends, so your brand doesn&apos;t just keep up —
+                it leads. Whether you&apos;re launching something new,
+                rebranding, or scaling up, Blue Agency is your creative growth
+                partner.
               </p>
+
               <div className="bg-linear-to-r from-blue-900/30 to-cyan-900/30 p-6 rounded-xl border border-blue-500/30">
                 <p className="text-xl font-semibold text-blue-300 mb-2">
                   Our Mission
