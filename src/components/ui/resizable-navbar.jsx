@@ -190,7 +190,7 @@ export const NavbarLogo = () => {
 };
 
 export const NavbarButton = ({
-  href,
+  href = "https://calendly.com/",
   as: Tag = "a",
   children,
   className,
@@ -212,6 +212,7 @@ export const NavbarButton = ({
   return (
     <Tag
       href={href || undefined}
+      target="_blank"
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
     >

@@ -79,7 +79,8 @@ export default function BlueAgencyLanding() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="#contact"
+                href="https://calendly.com/"
+                target="_blank"
                 className="group bg-linear-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/50 transition flex items-center gap-2"
               >
                 Start Your Campaign
@@ -88,10 +89,6 @@ export default function BlueAgencyLanding() {
                   size={20}
                 />
               </a>
-              <button className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-blue-500/50 hover:bg-blue-900/30 transition flex items-center gap-2">
-                <Play size={20} />
-                Watch Showcase
-              </button>
             </div>
           </div>
 
@@ -317,7 +314,8 @@ export default function BlueAgencyLanding() {
 
             <div className="text-center">
               <a
-                href="#contact"
+                href="https://calendly.com/"
+                target="_blank"
                 className="inline-flex items-center gap-2 bg-linear-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition"
               >
                 Launch Your Website <ArrowRight size={20} />
@@ -359,7 +357,8 @@ export default function BlueAgencyLanding() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#contact"
+              href="https://calendly.com/"
+              target="_blank"
               className="bg-linear-to-r from-blue-600 to-cyan-600 px-10 py-5 rounded-full font-bold text-lg hover:shadow-xl hover:shadow-blue-500/50 transition"
             >
               Schedule a Free Consultation
